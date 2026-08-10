@@ -7,9 +7,9 @@
 ## Current status
 
 - **Schedule health:** On schedule
-- **Completed:** 1 of 23 daily milestones
-- **Current milestone:** Step 2 in progress
-- **Next target:** Connect the repository to GitHub and push `main`
+- **Completed:** 2 of 23 daily milestones
+- **Current milestone:** Step 2 complete
+- **Next target:** Build the basic non-RAG LLM assistant on 11 August
 - **Last reviewed:** 10 August 2026
 
 ## Daily milestones
@@ -17,7 +17,7 @@
 | Date | Planned target | Status | Evidence / notes |
 |---|---|---|---|
 | 9 Aug | Define scope, users, safety boundaries, and success criteria | Complete | `PROJECT_SPEC.md` created |
-| 10 Aug | Initialize Git repository and Python project environment | In progress | Python 3.11.5, `.venv`, package tooling, passing test, and commit `93d43ed` verified; GitHub connection remains |
+| 10 Aug | Initialize Git repository and Python project environment | Complete | Python 3.11.5, `.venv`, package tooling, passing test, commits `93d43ed` and `7b47010`, and `origin/main` verified |
 | 11 Aug | Build a basic non-RAG LLM assistant | Not started | |
 | 12 Aug | Select trusted security sources and create source manifest | Not started | |
 | 13 Aug | Implement document parsing and normalization | Not started | |
