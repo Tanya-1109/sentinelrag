@@ -6,11 +6,11 @@
 
 ## Current status
 
-- **Schedule health:** On schedule
-- **Completed:** 2 of 23 daily milestones
-- **Current milestone:** Step 2 complete
-- **Next target:** Build the basic non-RAG LLM assistant on 11 August
-- **Last reviewed:** 10 August 2026
+- **Schedule health:** At risk (one-day carryover planned)
+- **Completed:** 3 of 23 daily milestones
+- **Current milestone:** Step 3 complete
+- **Next target:** Select trusted security sources and create the source manifest on 13 August
+- **Last reviewed:** 11 August 2026
 
 ## Daily milestones
 
@@ -18,8 +18,8 @@
 |---|---|---|---|
 | 9 Aug | Define scope, users, safety boundaries, and success criteria | Complete | `PROJECT_SPEC.md` created |
 | 10 Aug | Initialize Git repository and Python project environment | Complete | Python 3.11.5, `.venv`, package tooling, passing test, commits `93d43ed` and `7b47010`, and `origin/main` verified |
-| 11 Aug | Build a basic non-RAG LLM assistant | Not started | |
-| 12 Aug | Select trusted security sources and create source manifest | Not started | |
+| 11 Aug | Build a basic non-RAG LLM assistant | Complete (12 Aug) | Local Ollama model, validated settings, HTTP client, defensive system prompt, CLI, mocked error handling, 7 passing tests, and three live behavior checks verified |
+| 12 Aug | Finish basic assistant; begin trusted-source manifest if time permits | Complete | Step 3 carryover completed; source collection scheduled next |
 | 13 Aug | Implement document parsing and normalization | Not started | |
 | 14 Aug | Implement metadata-aware chunking | Not started | |
 | 15 Aug | Generate embeddings and create vector index | Not started | |
