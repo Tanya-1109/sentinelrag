@@ -1,0 +1,72 @@
+schema_version: 1
+
+sources:
+  - id: owasp-top-10-2021
+    title: "OWASP Top 10:2021"
+    publisher: "OWASP Foundation"
+    source_type: "web"
+    url: "https://owasp.org/Top10/2021/"
+    topics:
+      - application-security
+      - web-security
+      - vulnerabilities
+    license:
+      name: "Creative Commons Attribution 3.0 Unported"
+      url: "https://creativecommons.org/licenses/by/3.0/"
+      attribution_required: true
+    trust_tier: 1
+    enabled: true
+    notes: "Primary application-security awareness document."
+
+  - id: nist-sp-800-61r3
+    title: "Incident Response Recommendations and Considerations for Cybersecurity Risk Management"
+    publisher: "National Institute of Standards and Technology"
+    source_type: "pdf"
+    url: "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r3.pdf"
+    topics:
+      - incident-response
+      - risk-management
+      - recovery
+    license:
+      name: "U.S. Government work; verify publication notices"
+      url: "https://www.nist.gov/open/copyrights-fair-use-and-licensing-statements-srd-data-and-software"
+      attribution_required: true
+    trust_tier: 1
+    enabled: true
+    notes: "Current NIST incident-response guidance aligned with CSF 2.0."
+
+  - id: cisa-cybersecurity-advisories
+    title: "CISA Cybersecurity Alerts and Advisories"
+    publisher: "Cybersecurity and Infrastructure Security Agency"
+    source_type: "collection"
+    url: "https://www.cisa.gov/news-events/cybersecurity-advisories"
+    topics:
+      - threat-intelligence
+      - vulnerabilities
+      - mitigations
+    license:
+      name: "U.S. Government content; item-level review required"
+      url: "https://www.cisa.gov/about/website-policies"
+      attribution_required: true
+    trust_tier: 1
+    enabled: false
+    notes: "Collection page only. Specific advisories must be selected before ingestion."
+
+  - id: mitre-attack-enterprise
+    title: "MITRE ATT&CK Enterprise"
+    publisher: "The MITRE Corporation"
+    source_type: "web"
+    url: "https://attack.mitre.org/matrices/enterprise/"
+    topics:
+      - adversary-behavior
+      - tactics
+      - techniques
+      - detections
+      - mitigations
+    license:
+      name: "MITRE ATT&CK Terms of Use"
+      url: "https://attack.mitre.org/resources/terms-of-use/"
+      attribution_required: true
+    trust_tier: 1
+    enabled: true
+    notes: "Preserve the required MITRE copyright designation when redistributing."

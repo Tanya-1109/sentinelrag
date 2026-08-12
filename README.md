@@ -27,3 +27,33 @@ actions, or unauthorized scanning capabilities.
 
 - [Project specification](PROJECT_SPEC.md)
 - [Development tracker](PROJECT_TRACKER.md)
+
+## Trusted knowledge sources
+
+SentinelRAG uses a versioned source manifest at
+[`data/sources.yaml`](data/sources.yaml) to control which documents may
+enter the knowledge base.
+
+Each source records:
+
+- Publisher and authoritative URL
+- Source type and security topics
+- Trust tier
+- Licensing and attribution requirements
+- Whether ingestion is enabled
+
+The manifest currently includes OWASP, NIST, CISA, and MITRE ATT&CK
+sources. Collection pages are disabled until individual documents are
+selected.
+
+Validate the manifest locally:
+
+```powershell
+sentinelrag-sources data/sources.yaml
+```
+
+Expected result:
+
+```text
+Valid manifest: 4 sources, 3 enabled.
+```
