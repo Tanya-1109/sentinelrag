@@ -57,3 +57,27 @@ Expected result:
 ```text
 Valid manifest: 4 sources, 3 enabled.
 ```
+## Document ingestion
+
+SentinelRAG downloads only enabled sources from the validated source
+manifest. Web documents are normalized by removing navigation, scripts,
+styles, headers, footers, and other page boilerplate.
+
+Each processed document preserves:
+
+- Stable source ID
+- Publisher and authoritative URL
+- Retrieval timestamp
+- Security topics
+- Licensing metadata
+- Normalized content
+- SHA-256 content hash
+
+Ingest one approved source:
+
+```powershell
+sentinelrag-ingest owasp-top-10-2021
+```
+
+Generated records are written to `data/processed/` and are excluded from
+Git because they can be reproduced from the source manifest.

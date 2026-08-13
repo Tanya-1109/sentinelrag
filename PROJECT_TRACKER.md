@@ -7,10 +7,10 @@
 ## Current status
 
 - **Schedule health:** On schedule after carryover recovery
-- **Completed:** 4 of 23 daily milestones
-- **Current milestone:** Step 4 complete
-- **Next target:** Implement document parsing and normalization on 13 August
-- **Last reviewed:** 12 August 2026
+- **Completed:** 5 of 23 daily milestones
+- **Current milestone:** Step 5 complete
+- **Next target:** Implement metadata-aware chunking on 14 August
+- **Last reviewed:** 13 August 2026
 
 ## Daily milestones
 
@@ -21,7 +21,7 @@
 | 11 Aug | Build a basic non-RAG LLM assistant | Complete (12 Aug) | Local Ollama model, validated settings, HTTP client, defensive system prompt, CLI, mocked error handling, 7 passing tests, and three live behavior checks verified |
 | 12 Aug | Finish basic assistant; begin trusted-source manifest if time permits | Complete | Step 3 carryover completed; source collection scheduled next |
 | 12 Aug | Select trusted security sources and create source manifest | Complete | Four authoritative sources cataloged; strict Pydantic validation, CLI validation command, and 11 passing tests verified |
-| 13 Aug | Implement document parsing and normalization | Not started | |
+| 13 Aug | Implement document parsing and normalization | Complete | Controlled HTTPS fetch, HTML cleanup, provenance, SHA-256 change detection, JSON persistence, ingestion CLI, 24 passing tests, and a 16,139-character live OWASP record verified |
 | 14 Aug | Implement metadata-aware chunking | Not started | |
 | 15 Aug | Generate embeddings and create vector index | Not started | |
 | 16 Aug | Implement and test semantic retrieval | Not started | |

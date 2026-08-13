@@ -5,7 +5,7 @@ sources:
     title: "OWASP Top 10:2021"
     publisher: "OWASP Foundation"
     source_type: "web"
-    url: "https://owasp.org/Top10/2021/"
+    url: "https://owasp.org/Top10/2021/A00_2021_Introduction/"
     topics:
       - application-security
       - web-security
