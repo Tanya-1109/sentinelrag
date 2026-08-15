@@ -6,11 +6,11 @@
 
 ## Current status
 
-- **Schedule health:** On schedule after carryover recovery
+- **Schedule health:** Behind by one milestone
 - **Completed:** 5 of 23 daily milestones
-- **Current milestone:** Step 5 complete
-- **Next target:** Implement metadata-aware chunking on 14 August
-- **Last reviewed:** 13 August 2026
+- **Current milestone:** Step 6 not started
+- **Next target:** Complete metadata-aware chunking before starting embeddings
+- **Last reviewed:** 15 August 2026
 
 ## Daily milestones
 
@@ -22,8 +22,8 @@
 | 12 Aug | Finish basic assistant; begin trusted-source manifest if time permits | Complete | Step 3 carryover completed; source collection scheduled next |
 | 12 Aug | Select trusted security sources and create source manifest | Complete | Four authoritative sources cataloged; strict Pydantic validation, CLI validation command, and 11 passing tests verified |
 | 13 Aug | Implement document parsing and normalization | Complete | Controlled HTTPS fetch, HTML cleanup, provenance, SHA-256 change detection, JSON persistence, ingestion CLI, 24 passing tests, and a 16,139-character live OWASP record verified |
-| 14 Aug | Implement metadata-aware chunking | Not started | |
-| 15 Aug | Generate embeddings and create vector index | Not started | |
+| 14 Aug | Implement metadata-aware chunking | Not started | Overdue; no chunk model, chunking implementation, or chunk tests detected as of 15 August |
+| 15 Aug | Generate embeddings and create vector index | Not started | Must follow validated chunking; do not skip the dependency |
 | 16 Aug | Implement and test semantic retrieval | Not started | |
 | 17 Aug | Complete first RAG flow with citations | Not started | |
 | 18 Aug | Add hybrid semantic and keyword search | Not started | |
