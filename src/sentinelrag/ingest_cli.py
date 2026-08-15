@@ -3,7 +3,7 @@
 import sys
 from pathlib import Path
 
-from sentinelrag.fetcher import SourceFetchError, SourceFetcher
+from sentinelrag.fetcher import SourceFetcher, SourceFetchError
 from sentinelrag.ingestion import ingest_web_source, save_normalized_document
 from sentinelrag.sources import load_source_manifest
 

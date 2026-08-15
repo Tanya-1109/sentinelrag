@@ -7,9 +7,9 @@
 ## Current status
 
 - **Schedule health:** Behind by one milestone
-- **Completed:** 5 of 23 daily milestones
-- **Current milestone:** Step 6 not started
-- **Next target:** Complete metadata-aware chunking before starting embeddings
+- **Completed:** 6 of 23 daily milestones
+- **Current milestone:** Step 6 complete; embedding generation is next
+- **Next target:** Generate local embeddings and build the first vector index
 - **Last reviewed:** 15 August 2026
 
 ## Daily milestones
@@ -22,8 +22,8 @@
 | 12 Aug | Finish basic assistant; begin trusted-source manifest if time permits | Complete | Step 3 carryover completed; source collection scheduled next |
 | 12 Aug | Select trusted security sources and create source manifest | Complete | Four authoritative sources cataloged; strict Pydantic validation, CLI validation command, and 11 passing tests verified |
 | 13 Aug | Implement document parsing and normalization | Complete | Controlled HTTPS fetch, HTML cleanup, provenance, SHA-256 change detection, JSON persistence, ingestion CLI, 24 passing tests, and a 16,139-character live OWASP record verified |
-| 14 Aug | Implement metadata-aware chunking | Not started | Overdue; no chunk model, chunking implementation, or chunk tests detected as of 15 August |
-| 15 Aug | Generate embeddings and create vector index | Not started | Must follow validated chunking; do not skip the dependency |
+| 14 Aug | Implement metadata-aware chunking | Complete (15 Aug) | Deterministic word-aligned overlap, exact offsets, provenance, SHA-256 hashes, JSON persistence, `sentinelrag-chunk` CLI, 35 passing tests, and 19 validated OWASP chunks |
+| 15 Aug | Generate embeddings and create vector index | Not started | One milestone behind; begin only after committing the completed chunking milestone |
 | 16 Aug | Implement and test semantic retrieval | Not started | |
 | 17 Aug | Complete first RAG flow with citations | Not started | |
 | 18 Aug | Add hybrid semantic and keyword search | Not started | |

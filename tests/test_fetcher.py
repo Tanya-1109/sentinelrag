@@ -3,7 +3,7 @@ from pathlib import Path
 import httpx
 import pytest
 
-from sentinelrag.fetcher import SourceFetchError, SourceFetcher
+from sentinelrag.fetcher import SourceFetcher, SourceFetchError
 from sentinelrag.sources import load_source_manifest
 
 

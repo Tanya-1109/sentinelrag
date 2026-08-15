@@ -33,5 +33,6 @@ Thumbs.db
 # Local data and logs
 data/raw/
 data/processed/
+data/chunks/
 logs/
 *.log

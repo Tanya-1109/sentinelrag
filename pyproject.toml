@@ -20,6 +20,7 @@ dependencies = [
 
 [project.scripts]
 sentinelrag = "sentinelrag.cli:main"
+sentinelrag-chunk = "sentinelrag.chunk_cli:main"
 sentinelrag-ingest = "sentinelrag.ingest_cli:main"
 sentinelrag-sources = "sentinelrag.source_cli:main"
 

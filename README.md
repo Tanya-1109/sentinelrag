@@ -57,6 +57,7 @@ Expected result:
 ```text
 Valid manifest: 4 sources, 3 enabled.
 ```
+
 ## Document ingestion
 
 SentinelRAG downloads only enabled sources from the validated source
@@ -81,3 +82,19 @@ sentinelrag-ingest owasp-top-10-2021
 
 Generated records are written to `data/processed/` and are excluded from
 Git because they can be reproduced from the source manifest.
+
+## Metadata-aware chunking
+
+Normalized documents are divided into deterministic, overlapping chunks
+before embedding. Each chunk preserves its source URL, publisher, topics,
+character offsets, parent-document hash, and its own SHA-256 content hash.
+
+Chunk a normalized document locally:
+
+```powershell
+sentinelrag-chunk data/processed/owasp-top-10-2021.json --output data/chunks --max-chars 1000 --overlap-chars 150
+```
+
+Generated chunk records are written to `data/chunks/` and excluded from Git
+because they can be reproduced from normalized documents. The current OWASP
+sample produces 19 validated chunks.
