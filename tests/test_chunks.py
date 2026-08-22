@@ -8,6 +8,7 @@ from pathlib import Path
 from sentinelrag.chunks import (
     DocumentChunk,
     build_document_chunks,
+    load_document_chunks,
     save_document_chunks,
     split_content,
 )
@@ -199,3 +200,32 @@ def test_save_document_chunks_writes_json(
     assert saved_chunks[0]["chunk_id"] == "example-source::0000"
     assert saved_chunks[0]["content"] == chunk.content
     assert saved_chunks[0]["document_hash"] == "b" * 64
+
+
+def test_load_document_chunks_validates_saved_json(
+    tmp_path: Path,
+) -> None:
+    chunk = DocumentChunk(
+        chunk_id="example-source::0000",
+        source_id="example-source",
+        chunk_index=0,
+        content="Access control prevents unauthorized actions.",
+        content_hash=hashlib.sha256(b"Access control prevents unauthorized actions.").hexdigest(),
+        document_hash="b" * 64,
+        start_char=0,
+        end_char=45,
+        title="Example Security Guide",
+        publisher="Example Publisher",
+        source_url="https://example.com/security",
+        topics=["application-security"],
+    )
+
+    output_path = save_document_chunks(
+        chunks=[chunk],
+        output_directory=tmp_path,
+    )
+
+    loaded_chunks = load_document_chunks(output_path)
+
+    assert loaded_chunks == [chunk]
+    assert isinstance(loaded_chunks[0], DocumentChunk)

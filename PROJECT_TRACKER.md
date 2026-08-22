@@ -6,11 +6,12 @@
 
 ## Current status
 
-- **Schedule health:** Behind by one milestone
-- **Completed:** 6 of 23 daily milestones
-- **Current milestone:** Step 6 complete; embedding generation is next
-- **Next target:** Generate local embeddings and build the first vector index
-- **Last reviewed:** 15 August 2026
+- **Schedule health:** Behind; core RAG path prioritized
+- **Completed:** 7 of 23 daily milestones
+- **Current milestone:** Semantic retrieval
+- **Next target:** Implement and test cosine-similarity retrieval
+- **Final deadline:** 31 August 2026 (unchanged)
+- **Last reviewed:** 22 August 2026
 
 ## Daily milestones
 
@@ -23,9 +24,9 @@
 | 12 Aug | Select trusted security sources and create source manifest | Complete | Four authoritative sources cataloged; strict Pydantic validation, CLI validation command, and 11 passing tests verified |
 | 13 Aug | Implement document parsing and normalization | Complete | Controlled HTTPS fetch, HTML cleanup, provenance, SHA-256 change detection, JSON persistence, ingestion CLI, 24 passing tests, and a 16,139-character live OWASP record verified |
 | 14 Aug | Implement metadata-aware chunking | Complete (15 Aug) | Deterministic word-aligned overlap, exact offsets, provenance, SHA-256 hashes, JSON persistence, `sentinelrag-chunk` CLI, 35 passing tests, and 19 validated OWASP chunks |
-| 15 Aug | Generate embeddings and create vector index | Not started | One milestone behind; begin only after committing the completed chunking milestone |
-| 16 Aug | Implement and test semantic retrieval | Not started | |
-| 17 Aug | Complete first RAG flow with citations | Not started | |
+| 15 Aug | Generate embeddings and create vector index | Complete (22 Aug) | Local `nomic-embed-text` integration, validated 768-dimensional vectors, batched embedding, persistence, index CLI, 46 passing tests, and a real OWASP index containing 19 validated records. |
+| 16 Aug | Implement and test semantic retrieval | Not started | Overdue; the validated real vector index is now ready for retrieval work. |
+| 17 Aug | Complete first RAG flow with citations | Not started | Checkpoint missed; final project deadline remains 31 August. |
 | 18 Aug | Add hybrid semantic and keyword search | Not started | |
 | 19 Aug | Add reranking and query routing | Not started | |
 | 20 Aug | Add structured security finding output | Not started | |
@@ -42,6 +43,28 @@
 | 31 Aug | Polish portfolio, publish release, and prepare resume bullets | Not started | |
 
 ## Daily check-in
+
+### 22 August 2026
+
+- **Time spent:** Not recorded
+- **Planned target:** Integrate MCP tools with the assistant
+- **Completed:** Generated and validated the real OWASP vector index containing 19 records with 768 dimensions using `nomic-embed-text`
+- **Learning:** Verified index schema, record count, dimensions, finite vector values, and sequential chunk IDs
+- **Evidence:** `data/index/security-index.json`, successful integrity output, and 46 passing tests reported
+- **Blockers:** None currently; project remains behind schedule
+- **Next action:** Implement and test cosine-similarity retrieval
+- **Schedule status:** Behind
+
+### 17 August 2026
+
+- **Time spent:** Not recorded
+- **Planned target:** Complete first RAG flow with citations
+- **Completed:** Local embedding client; live 768-dimensional embedding verification; validated vector records; batched embedding; vector-index persistence; validated chunk loading; index workflow and CLI
+- **Learning:** Embedding dimensions, batching, vector validation, and auditable index metadata
+- **Evidence:** `src/sentinelrag/embeddings.py`, `src/sentinelrag/vector_index.py`, `src/sentinelrag/index_cli.py`, related tests, 46 passing tests reported
+- **Blockers:** None reported; real index generation deferred until tomorrow
+- **Tomorrow's first action:** Run `sentinelrag-index data/chunks/owasp-top-10-2021.chunks.json` and validate 19 records with 768 dimensions
+- **Schedule status:** Behind
 
 Complete this section at the end of each work session:
 

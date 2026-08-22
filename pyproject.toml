@@ -23,6 +23,7 @@ sentinelrag = "sentinelrag.cli:main"
 sentinelrag-chunk = "sentinelrag.chunk_cli:main"
 sentinelrag-ingest = "sentinelrag.ingest_cli:main"
 sentinelrag-sources = "sentinelrag.source_cli:main"
+sentinelrag-index = "sentinelrag.index_cli:main"
 
 [project.optional-dependencies]
 dev = [

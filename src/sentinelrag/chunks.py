@@ -8,7 +8,14 @@ from sentinelrag.documents import NormalizedDocument
 
 from dataclasses import dataclass
 
-from pydantic import BaseModel, ConfigDict, Field, HttpUrl, model_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    HttpUrl,
+    TypeAdapter,
+    model_validator,
+)
 
 
 @dataclass(frozen=True)
@@ -182,3 +189,22 @@ def save_document_chunks(
     )
 
     return output_path
+
+
+def load_document_chunks(
+    input_path: Path,
+) -> list[DocumentChunk]:
+    """Load and validate persisted document chunks."""
+
+    chunk_json = input_path.read_text(encoding="utf-8")
+    chunks = TypeAdapter(list[DocumentChunk]).validate_json(chunk_json)
+
+    if not chunks:
+        raise ValueError("Chunk file cannot be empty.")
+
+    source_ids = {chunk.source_id for chunk in chunks}
+
+    if len(source_ids) != 1:
+        raise ValueError("All loaded chunks must belong to the same source.")
+
+    return chunks

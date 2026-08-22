@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     llm_provider: Literal["ollama"] = "ollama"
     ollama_base_url: AnyHttpUrl = "http://localhost:11434"
     ollama_model: str = "qwen2.5:1.5b"
+    ollama_embedding_model: str = "nomic-embed-text"
 
     model_config = SettingsConfigDict(
         env_file=".env",
